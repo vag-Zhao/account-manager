@@ -12,7 +12,7 @@
 ### 安装步骤
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/account-manager.git
+git clone https://github.com/vag-Zhao/account-manager.git
 cd account-manager
 
 # 安装前端依赖

@@ -90,7 +90,7 @@ go install github.com/wailsapp/wails/v2/cmd/wails@latest
 
 1. **克隆仓库 | Clone Repository**
 ```bash
-git clone https://github.com/yourusername/account-manager.git
+git clone https://github.com/vag-Zhao/account-manager.git
 cd account-manager
 ```
 
