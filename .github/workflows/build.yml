@@ -1,0 +1,44 @@
+name: Build
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        platform: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.24'
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install Wails
+      run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
+
+    - name: Install frontend dependencies
+      run: |
+        cd frontend
+        npm install
+
+    - name: Build
+      run: wails build
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: account-manager-${{ matrix.platform }}
+        path: build/bin/

@@ -1,0 +1,27 @@
+app:
+  name: "Account Manager"
+  version: "2.0.0"
+  debug: false
+
+database:
+  path: "data/account_manager.db"
+  max_open_conns: 25
+  max_idle_conns: 5
+  conn_max_lifetime: 5m
+
+cache:
+  default_expiration: 5m
+  cleanup_interval: 10m
+  stats_expiration: 5m
+
+worker:
+  pool_size: 10
+  decryption_workers: 10
+  email_queue_size: 100
+  email_workers: 3
+
+server:
+  default_port: 22
+  ssh_timeout: 10
+  deploy_timeout: 300
+  build_target: "linux/amd64"

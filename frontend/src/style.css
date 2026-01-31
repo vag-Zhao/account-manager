@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 莫兰迪色系 */
+  --primary-color: #7C9885;
+  --primary-hover: #6A8573;
+  --secondary-color: #B8A99A;
+  --accent-color: #C4A77D;
+  --success-color: #8BAF92;
+  --warning-color: #D4B896;
+  --error-color: #C9A5A5;
+  --info-color: #9EB3C2;
+
+  /* 背景色 */
+  --bg-color: #F8F6F4;
+  --card-bg: #FFFFFF;
+  --hover-bg: rgba(0,0,0,0.02);
+
+  /* 边框色 */
+  --border-color: #E8E4E0;
+
+  /* 文字色 */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+
+  /* 阴影 */
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
